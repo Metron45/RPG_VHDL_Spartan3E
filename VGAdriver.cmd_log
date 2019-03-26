@@ -1,0 +1,2 @@
+vhdtdtfi -lib work VGA.vhd -prj VGA_GAME -o VGAdriver.spl -module VGAdriver -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e VGAdriver.spl C:/Users/lab/VGA_GAME/VGAdriver.sym 

@@ -1,0 +1,2 @@
+vhdtdtfi -lib work Colors.vhd -prj VGA_GAME -o picture.spl -module picture -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e picture.spl C:/Users/lab/VGA_GAME/picture.sym 

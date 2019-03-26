@@ -1,0 +1,6 @@
+AR vgadriver behavioral C:/Users/lab/VGA_GAME/VGA.vhd sub00/vhpl01 1553599574
+EN vgadriver NULL C:/Users/lab/VGA_GAME/VGA.vhd sub00/vhpl00 1553599573
+EN scheme NULL C:/Users/lab/VGA_GAME/Scheme.vhf sub00/vhpl04 1553599577
+AR scheme behavioral C:/Users/lab/VGA_GAME/Scheme.vhf sub00/vhpl05 1553599578
+AR picture behavioral C:/Users/lab/VGA_GAME/Colors.vhd sub00/vhpl03 1553599576
+EN picture NULL C:/Users/lab/VGA_GAME/Colors.vhd sub00/vhpl02 1553599575

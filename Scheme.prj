@@ -1,0 +1,3 @@
+vhdl work "VGA.vhd"
+vhdl work "Colors.vhd"
+vhdl work "Scheme.vhf"
