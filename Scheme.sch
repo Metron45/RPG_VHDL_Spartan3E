@@ -37,8 +37,8 @@
             <rect width="64" x="320" y="-44" height="24" />
             <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
-        <blockdef name="picture">
-            <timestamp>2019-3-26T10:46:17</timestamp>
+        <blockdef name="GameMap">
+            <timestamp>2019-4-9T11:4:23</timestamp>
             <rect width="256" x="64" y="-128" height="128" />
             <rect width="64" x="0" y="-108" height="24" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
@@ -58,7 +58,7 @@
             <blockpin signalname="XLXN_1(9:0)" name="PIX_X(9:0)" />
             <blockpin signalname="XLXN_2(8:0)" name="PIX_Y(8:0)" />
         </block>
-        <block symbolname="picture" name="XLXI_2">
+        <block symbolname="GameMap" name="XLXI_3">
             <blockpin signalname="XLXN_1(9:0)" name="PIX_X(9:0)" />
             <blockpin signalname="XLXN_2(8:0)" name="PIX_Y(8:0)" />
             <blockpin signalname="XLXN_3(2:0)" name="RGB(2:0)" />
@@ -67,26 +67,11 @@
     <sheet sheetnum="1" width="3520" height="2720">
         <instance x="2128" y="1088" name="XLXI_1" orien="R0">
         </instance>
-        <instance x="1088" y="1200" name="XLXI_2" orien="R0">
-        </instance>
-        <branch name="XLXN_1(9:0)">
-            <wire x2="688" y1="1104" y2="1856" x1="688" />
-            <wire x2="3056" y1="1856" y2="1856" x1="688" />
-            <wire x2="1088" y1="1104" y2="1104" x1="688" />
-            <wire x2="3056" y1="992" y2="992" x1="2512" />
-            <wire x2="3056" y1="992" y2="1856" x1="3056" />
-        </branch>
-        <branch name="XLXN_2(8:0)">
-            <wire x2="784" y1="1168" y2="1792" x1="784" />
-            <wire x2="2944" y1="1792" y2="1792" x1="784" />
-            <wire x2="1088" y1="1168" y2="1168" x1="784" />
-            <wire x2="2944" y1="1056" y2="1056" x1="2512" />
-            <wire x2="2944" y1="1056" y2="1792" x1="2944" />
-        </branch>
         <branch name="XLXN_3(2:0)">
             <wire x2="2032" y1="1104" y2="1104" x1="1472" />
+            <wire x2="2112" y1="1056" y2="1056" x1="2032" />
+            <wire x2="2128" y1="1056" y2="1056" x1="2112" />
             <wire x2="2032" y1="1056" y2="1104" x1="2032" />
-            <wire x2="2128" y1="1056" y2="1056" x1="2032" />
         </branch>
         <branch name="Clk_50MHz">
             <wire x2="2112" y1="672" y2="672" x1="1152" />
@@ -113,5 +98,23 @@
             <wire x2="2544" y1="928" y2="928" x1="2512" />
         </branch>
         <iomarker fontsize="28" x="2544" y="928" name="VGA_VS" orien="R0" />
+        <branch name="XLXN_2(8:0)">
+            <wire x2="784" y1="1168" y2="1792" x1="784" />
+            <wire x2="2944" y1="1792" y2="1792" x1="784" />
+            <wire x2="1088" y1="1168" y2="1168" x1="784" />
+            <wire x2="2528" y1="1056" y2="1056" x1="2512" />
+            <wire x2="2944" y1="1056" y2="1056" x1="2528" />
+            <wire x2="2944" y1="1056" y2="1792" x1="2944" />
+        </branch>
+        <branch name="XLXN_1(9:0)">
+            <wire x2="688" y1="1104" y2="1856" x1="688" />
+            <wire x2="3056" y1="1856" y2="1856" x1="688" />
+            <wire x2="1088" y1="1104" y2="1104" x1="688" />
+            <wire x2="2528" y1="992" y2="992" x1="2512" />
+            <wire x2="3056" y1="992" y2="992" x1="2528" />
+            <wire x2="3056" y1="992" y2="1856" x1="3056" />
+        </branch>
+        <instance x="1088" y="1200" name="XLXI_3" orien="R0">
+        </instance>
     </sheet>
 </drawing>

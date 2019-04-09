@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/lab/VGA_GAME/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/lab/VGA_GAME/xst"
+elaborate
+-ifn GameMap.prj
+-ifmt mixed

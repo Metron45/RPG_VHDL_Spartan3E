@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Scheme.vhf
--- /___/   /\     Timestamp : 03/26/2019 11:52:27
+-- /___/   /\     Timestamp : 04/09/2019 13:04:58
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -50,7 +50,7 @@ architecture BEHAVIORAL of Scheme is
              PIX_Y     : out   std_logic_vector (8 downto 0));
    end component;
    
-   component picture
+   component GameMap
       port ( PIX_X : in    std_logic_vector (9 downto 0); 
              PIX_Y : in    std_logic_vector (8 downto 0); 
              RGB   : out   std_logic_vector (2 downto 0));
@@ -68,7 +68,7 @@ begin
                 VGA_R=>VGA_R,
                 VGA_VS=>VGA_VS);
    
-   XLXI_2 : picture
+   XLXI_3 : GameMap
       port map (PIX_X(9 downto 0)=>XLXN_1(9 downto 0),
                 PIX_Y(8 downto 0)=>XLXN_2(8 downto 0),
                 RGB(2 downto 0)=>XLXN_3(2 downto 0));
