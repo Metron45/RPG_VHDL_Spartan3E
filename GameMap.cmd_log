@@ -18,3 +18,33 @@ vhdtdtfi -lib work Map.vhd -prj VGA_GAME -o GameMap.spl -module GameMap -templat
 spl2sym -intstyle ise -family spartan3e GameMap.spl C:/Users/lab/VGA_GAME/GameMap.sym 
 vhdtdtfi -lib work Map.vhd -prj VGA_GAME -o GameMap.spl -module GameMap -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e GameMap.spl C:/Users/lab/VGA_GAME/GameMap.sym 
+vhdtdtfi -lib work Map.vhd -prj VGA_GAME -o GameMap.spl -module GameMap -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameMap.spl C:/Users/lab/VGA_GAME/GameMap.sym 
+vhdtdtfi -lib work Map.vhd -prj VGA_GAME -o GameMap.spl -module GameMap -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameMap.spl C:/Users/lab/VGA_GAME/GameMap.sym 
+vhdtdtfi -lib work Map.vhd -prj VGA_GAME -o GameMap.spl -module GameMap -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameMap.spl C:/Users/lab/VGA_GAME/GameMap.sym 
+vhdtdtfi -lib work Map.vhd -prj VGA_GAME -o GameMap.spl -module GameMap -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameMap.spl C:/Users/lab/VGA_GAME/GameMap.sym 
+vhdtdtfi -lib work Map.vhd -prj VGA_GAME -o GameMap.spl -module GameMap -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameMap.spl C:/Users/lab/VGA_GAME/GameMap.sym 
+vhdtdtfi -lib work Map.vhd -prj VGA_GAME -o GameMap.spl -module GameMap -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameMap.spl C:/Users/lab/VGA_GAME/GameMap.sym 
+vhdtdtfi -lib work Map.vhd -prj VGA_GAME -o GameMap.spl -module GameMap -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameMap.spl C:/Users/lab/VGA_GAME/GameMap.sym 
+vhdtdtfi -lib work Map.vhd -prj VGA_GAME -o GameMap.spl -module GameMap -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameMap.spl C:/Users/lab/VGA_GAME/GameMap.sym 
+vhdtdtfi -lib work Map.vhd -prj VGA_GAME -o GameMap.spl -module GameMap -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameMap.spl C:/Users/lab/VGA_GAME/GameMap.sym 
+vhdtdtfi -lib work Map.vhd -prj VGA_GAME -o GameMap.spl -module GameMap -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameMap.spl C:/Users/lab/VGA_GAME/GameMap.sym 
+vhdtdtfi -lib work Map.vhd -prj VGA_GAME -o GameMap.spl -module GameMap -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameMap.spl C:/Users/lab/VGA_GAME/GameMap.sym 
+vhdtdtfi -lib work Map.vhd -prj VGA_GAME -o GameMap.spl -module GameMap -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameMap.spl C:/Users/lab/VGA_GAME/GameMap.sym 
+vhdtdtfi -lib work Map.vhd -prj VGA_GAME -o GameMap.spl -module GameMap -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameMap.spl C:/Users/lab/Desktop/VGA_GAME/GameMap.sym 
+vhdtdtfi -lib work Map.vhd -prj VGA_GAME -o GameMap.spl -module GameMap -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameMap.spl C:/Users/lab/Desktop/VGA_GAME/GameMap.sym 
+vhdtdtfi -lib work Map.vhd -prj VGA_GAME -o GameMap.spl -module GameMap -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameMap.spl C:/Users/lab/Desktop/VGA_GAME/GameMap.sym 

@@ -1,8 +1,10 @@
-AR vgadriver behavioral C:/Users/lab/VGA_GAME/VGA.vhd sub00/vhpl01 1554807902
-AR gamemap behavioral C:/Users/lab/VGA_GAME/Map.vhd sub00/vhpl07 1554807904
-EN vgadriver NULL C:/Users/lab/VGA_GAME/VGA.vhd sub00/vhpl00 1554807901
-EN scheme NULL C:/Users/lab/VGA_GAME/Scheme.vhf sub00/vhpl04 1554807905
-AR scheme behavioral C:/Users/lab/VGA_GAME/Scheme.vhf sub00/vhpl05 1554807906
+AR vgadriver behavioral C:/Users/lab/Desktop/VGA_GAME/VGA.vhd sub00/vhpl01 1557229118
+AR gamemap behavioral C:/Users/lab/Desktop/VGA_GAME/Map.vhd sub00/vhpl07 1557229116
+EN vgadriver NULL C:/Users/lab/Desktop/VGA_GAME/VGA.vhd sub00/vhpl00 1557229117
+EN gamelogic NULL C:/Users/lab/Desktop/VGA_GAME/GameLogic.vhd sub00/vhpl08 1557229119
+EN scheme NULL C:/Users/lab/Desktop/VGA_GAME/Scheme.vhf sub00/vhpl04 1557229121
+AR scheme behavioral C:/Users/lab/Desktop/VGA_GAME/Scheme.vhf sub00/vhpl05 1557229122
 AR picture behavioral C:/Users/lab/VGA_GAME/Colors.vhd sub00/vhpl03 1554803807
+AR gamelogic behavioral C:/Users/lab/Desktop/VGA_GAME/GameLogic.vhd sub00/vhpl09 1557229120
 EN picture NULL C:/Users/lab/VGA_GAME/Colors.vhd sub00/vhpl02 1554803806
-EN gamemap NULL C:/Users/lab/VGA_GAME/Map.vhd sub00/vhpl06 1554807903
+EN gamemap NULL C:/Users/lab/Desktop/VGA_GAME/Map.vhd sub00/vhpl06 1557229115

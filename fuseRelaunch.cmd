@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/lab/VGA_GAME/Map_test_isim_beh.exe" -prj "C:/Users/lab/VGA_GAME/Map_test_beh.prj" "work.Map_test" 

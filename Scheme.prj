@@ -1,3 +1,4 @@
 vhdl work "VGA.vhd"
 vhdl work "Map.vhd"
+vhdl work "GameLogic.vhd"
 vhdl work "Scheme.vhf"

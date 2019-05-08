@@ -1,0 +1,6 @@
+[Inputs]
+=DIV_X[4:0]=
+=DIV_Y[3:0]=
+[Outputs]
+=RGB_MAP[2:0]=
+[BiDir]

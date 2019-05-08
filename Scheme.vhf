@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Scheme.vhf
--- /___/   /\     Timestamp : 04/09/2019 13:04:58
+-- /___/   /\     Timestamp : 05/07/2019 13:38:32
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/VGA_GAME/Scheme.vhf -w C:/Users/lab/VGA_GAME/Scheme.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Desktop/VGA_GAME/Scheme.vhf -w C:/Users/lab/Desktop/VGA_GAME/Scheme.sch
 --Design Name: Scheme
 --Device: spartan3e
 --Purpose:
@@ -38,6 +38,18 @@ architecture BEHAVIORAL of Scheme is
    signal XLXN_1    : std_logic_vector (9 downto 0);
    signal XLXN_2    : std_logic_vector (8 downto 0);
    signal XLXN_3    : std_logic_vector (2 downto 0);
+   signal XLXN_4    : std_logic_vector (4 downto 0);
+   signal XLXN_5    : std_logic_vector (3 downto 0);
+   signal XLXN_6    : std_logic_vector (2 downto 0);
+   component GameMap
+      port ( PIX_X   : in    std_logic_vector (9 downto 0); 
+             PIX_Y   : in    std_logic_vector (8 downto 0); 
+             RGB     : out   std_logic_vector (2 downto 0); 
+             RGB_MAP : in    std_logic_vector (2 downto 0); 
+             DIV_X   : out   std_logic_vector (4 downto 0); 
+             DIV_Y   : out   std_logic_vector (3 downto 0));
+   end component;
+   
    component VGAdriver
       port ( CLK_50MHz : in    std_logic; 
              RGB       : in    std_logic_vector (2 downto 0); 
@@ -50,14 +62,22 @@ architecture BEHAVIORAL of Scheme is
              PIX_Y     : out   std_logic_vector (8 downto 0));
    end component;
    
-   component GameMap
-      port ( PIX_X : in    std_logic_vector (9 downto 0); 
-             PIX_Y : in    std_logic_vector (8 downto 0); 
-             RGB   : out   std_logic_vector (2 downto 0));
+   component GameLogic
+      port ( DIV_X   : in    std_logic_vector (4 downto 0); 
+             DIV_Y   : in    std_logic_vector (3 downto 0); 
+             RGB_MAP : out   std_logic_vector (2 downto 0));
    end component;
    
 begin
-   XLXI_1 : VGAdriver
+   XLXI_3 : GameMap
+      port map (PIX_X(9 downto 0)=>XLXN_1(9 downto 0),
+                PIX_Y(8 downto 0)=>XLXN_2(8 downto 0),
+                RGB_MAP(2 downto 0)=>XLXN_6(2 downto 0),
+                DIV_X(4 downto 0)=>XLXN_4(4 downto 0),
+                DIV_Y(3 downto 0)=>XLXN_5(3 downto 0),
+                RGB(2 downto 0)=>XLXN_3(2 downto 0));
+   
+   XLXI_4 : VGAdriver
       port map (CLK_50MHz=>Clk_50MHz,
                 RGB(2 downto 0)=>XLXN_3(2 downto 0),
                 PIX_X(9 downto 0)=>XLXN_1(9 downto 0),
@@ -68,10 +88,10 @@ begin
                 VGA_R=>VGA_R,
                 VGA_VS=>VGA_VS);
    
-   XLXI_3 : GameMap
-      port map (PIX_X(9 downto 0)=>XLXN_1(9 downto 0),
-                PIX_Y(8 downto 0)=>XLXN_2(8 downto 0),
-                RGB(2 downto 0)=>XLXN_3(2 downto 0));
+   XLXI_5 : GameLogic
+      port map (DIV_X(4 downto 0)=>XLXN_4(4 downto 0),
+                DIV_Y(3 downto 0)=>XLXN_5(3 downto 0),
+                RGB_MAP(2 downto 0)=>XLXN_6(2 downto 0));
    
 end BEHAVIORAL;
 

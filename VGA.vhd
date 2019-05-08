@@ -28,16 +28,11 @@ end VGAdriver;
 
 architecture Behavioral of VGAdriver is
  
-   signal CLK_CNT: integer range 0 to 2;
    signal clk_25 : std_logic:= '0';
-   signal v_synchron : std_logic := '0';
-   signal h_synchron : std_logic := '0';
-   signal red_gb: std_logic_vector(2 downto 0):= "100";
-	signal h_cnt: integer range 0 to 800 := 0;
+   signal h_cnt: integer range 0 to 800 := 0;
 	signal v_cnt: integer range 0 to 521 := 31;
 	
 begin
-
    clk_div: process(CLK_50MHz)
 	begin
 		if rising_edge(CLK_50MHz) then

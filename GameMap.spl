@@ -1,6 +1,9 @@
 [Inputs]
 =PIX_X[9:0]=
 =PIX_Y[8:0]=
+=RGB_MAP[2:0]=
 [Outputs]
 =RGB[2:0]=
+=DIV_X[4:0]=
+=DIV_Y[3:0]=
 [BiDir]

@@ -33,43 +33,68 @@ entity GameMap is
    Port(
            PIX_X : in  STD_LOGIC_VECTOR (9 downto 0);
            PIX_Y : in  STD_LOGIC_VECTOR (8 downto 0);
-           RGB : out  STD_LOGIC_VECTOR (2 downto 0) 
+           RGB_MAP: in STD_LOGIC_VECTOR (2 downto 0);
+           RGB : out  STD_LOGIC_VECTOR (2 downto 0);
+           DIV_X: out STD_LOGIC_VECTOR (4 downto 0);
+           DIV_Y: out STD_LOGIC_VECTOR (3 downto 0)
        );
 end GameMap;
 
 architecture Behavioral of GameMap is
-
+--resolution
 signal x: integer range 0 to 640;
 signal y: integer range 0 to 480;
+--size of columns
+constant size_x: integer := 32;
+constant size_y: integer := 32;
+--number of columns
+constant x_col: integer:= 640/size_x;
+constant y_col: integer:= 480/size_y;
 
-constant size_x: integer := 160;
-constant size_y: integer := 240;
-constant x_col: integer:= (640/size_x);
-constant y_col: integer:= (480/size_y);
 
-signal counter_x: integer range x_col downto 0;
-signal counter_y: integer range y_col downto 0;
-
-type ARRAY_2D is array ( x_col-1 downto 0, y_col-1 downto 0) of std_logic_vector (2 downto 0);
-signal Territory: ARRAY_2D;
-
+signal div_x_sig: integer range 0 to x_col := 0;
+signal div_y_sig: integer range 0 to y_col := 0;
 
 
 begin
 
 x <= to_integer( unsigned( PIX_X ) );
 y <= to_integer( unsigned( PIX_Y ) );
-Territory <= (("101", "110"), ("001", "111"), ("010", "011"), ("111", "011"));
 
-process(x, y)
+process(x)
+variable var: integer range 0 to 640;
+variable count, i : integer range 0 to x_col;
 begin
-   for y_c in 1 to y_col loop
-      for x_c in 1 to x_col loop
-         if ( y < y_c*size_y and x < x_c*size_x ) then
-            RGB <= Territory(x_c - 1, y_c - 1);
-         end if;
-      end loop;
+   i:=0; var:=x; count:=0;
+   for i in x_col downto 0 loop
+      if(var >= size_x) then var:= var-size_x; count:= count +1;
+      else div_x_sig <= count;
+      end if;
    end loop;
 end process;
 
+
+process(y)
+variable var: integer range 0 to 480;
+variable count, i : integer range 0 to y_col;
+begin
+   i:=0; var:=y; count:=0;
+   for i in y_col downto 0 loop
+      if(var >= size_y) then var:= var-size_y; count:= count +1;
+      else div_y_sig <= count;
+      end if;
+   end loop;
+end process;
+
+
+process(RGB_MAP)
+begin
+     RGB <= RGB_MAP;   
+end process;
+
+process(div_x_sig, div_y_sig)
+begin 
+      DIV_X <= std_logic_vector(to_unsigned(div_x_sig, 5));
+      DIV_Y <= std_logic_vector(to_unsigned(div_y_sig, 4));
+end process;
 end Behavioral;

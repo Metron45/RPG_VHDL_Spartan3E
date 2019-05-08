@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to C:/Users/lab/VGA_GAME/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
@@ -18,8 +18,7 @@ Total CPU time to Xst completion: 0.13 secs
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/Users/lab/VGA_GAME/Map.vhd" in Library work.
-Entity <gamemap> compiled.
-Entity <gamemap> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity gamemap is up to date.
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -27,7 +26,7 @@ Total CPU time to Xst completion: 0.20 secs
  
 --> 
 
-Total memory usage is 174052 kilobytes
+Total memory usage is 174368 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

@@ -1,0 +1,27 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/lab/VGA_GAME/Map_test_isim_beh.exe -prj C:/Users/lab/VGA_GAME/Map_test_beh.prj work.Map_test 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+ERROR:HDLCompiler:488 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 60: Illegal identifier : _period
+ERROR:HDLCompiler:488 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 72: Illegal identifier : _process
+ERROR:HDLCompiler:488 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 75: Illegal identifier : _period
+ERROR:HDLCompiler:488 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 77: Illegal identifier : _period
+ERROR:HDLCompiler:488 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 87: Illegal identifier : _period
+Parsing VHDL file "C:/Users/lab/VGA_GAME/Map.vhd" into library work
+Parsing VHDL file "C:/Users/lab/VGA_GAME/Map_test.vhd" into library work
+ERROR:HDLCompiler:806 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 60: Syntax error near "<".
+ERROR:HDLCompiler:488 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 60: Illegal identifier : _period
+ERROR:HDLCompiler:806 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 72: Syntax error near "<".
+ERROR:HDLCompiler:488 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 72: Illegal identifier : _process
+ERROR:HDLCompiler:806 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 74: Syntax error near "<".
+ERROR:HDLCompiler:488 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 75: Illegal identifier : _period
+ERROR:HDLCompiler:488 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 77: Illegal identifier : _period
+WARNING:HDLCompiler:1369 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 72: Possible infinite loop; process does not have a wait statement
+ERROR:HDLCompiler:806 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 87: Syntax error near "<".
+ERROR:HDLCompiler:488 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 87: Illegal identifier : _period
+ERROR:HDLCompiler:839 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 90: Type std_logic_vector does not match with the integer literal
+ERROR:HDLCompiler:839 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 91: Type std_logic_vector does not match with the integer literal
+WARNING:HDLCompiler:1369 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 82: Possible infinite loop; process does not have a wait statement
+ERROR:HDLCompiler:854 - "C:/Users/lab/VGA_GAME/Map_test.vhd" Line 38: Unit <behavior> ignored due to previous errors.
+VHDL file C:/Users/lab/VGA_GAME/Map_test.vhd ignored due to errors

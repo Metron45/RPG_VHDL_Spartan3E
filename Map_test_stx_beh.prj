@@ -1,0 +1,2 @@
+vhdl isim_temp "Map.vhd"
+vhdl isim_temp "Map_test.vhd"
