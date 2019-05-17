@@ -42,8 +42,8 @@ end GameMap;
 
 architecture Behavioral of GameMap is
 --resolution
-signal x: integer range 0 to 640;
-signal y: integer range 0 to 480;
+signal x: integer range 0 to 639;
+signal y: integer range 0 to 479;
 --size of columns
 constant size_x: integer := 32;
 constant size_y: integer := 32;
@@ -52,8 +52,8 @@ constant x_col: integer:= 640/size_x;
 constant y_col: integer:= 480/size_y;
 
 
-signal div_x_sig: integer range 0 to x_col := 0;
-signal div_y_sig: integer range 0 to y_col := 0;
+signal div_x_sig: integer range 0 to x_col -1 := 0;
+signal div_y_sig: integer range 0 to y_col -1 := 0;
 
 
 begin
@@ -63,12 +63,12 @@ y <= to_integer( unsigned( PIX_Y ) );
 
 process(x)
 variable var: integer range 0 to 640;
-variable count, i : integer range 0 to x_col;
+variable count, i : integer range 0 to x_col - 1;
 begin
    i:=0; var:=x; count:=0;
-   for i in x_col downto 0 loop
+   for i in x_col -1 downto 0 loop
       if(var >= size_x) then var:= var-size_x; count:= count +1;
-      else div_x_sig <= count;
+      else div_x_sig <= count; exit;
       end if;
    end loop;
 end process;
@@ -76,12 +76,12 @@ end process;
 
 process(y)
 variable var: integer range 0 to 480;
-variable count, i : integer range 0 to y_col;
+variable count, i : integer range 0 to y_col - 1;
 begin
    i:=0; var:=y; count:=0;
-   for i in y_col downto 0 loop
+   for i in y_col -1 downto 0 loop
       if(var >= size_y) then var:= var-size_y; count:= count +1;
-      else div_y_sig <= count;
+      else div_y_sig <= count; exit;
       end if;
    end loop;
 end process;

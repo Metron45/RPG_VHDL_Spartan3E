@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Scheme.vhf
--- /___/   /\     Timestamp : 05/07/2019 13:38:32
+-- /___/   /\     Timestamp : 05/14/2019 14:11:14
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -27,6 +27,8 @@ use UNISIM.Vcomponents.ALL;
 
 entity Scheme is
    port ( Clk_50MHz : in    std_logic; 
+          PS2_Clk   : in    std_logic; 
+          PS2_Data  : in    std_logic; 
           VGA_B     : out   std_logic; 
           VGA_G     : out   std_logic; 
           VGA_HS    : out   std_logic; 
@@ -35,12 +37,18 @@ entity Scheme is
 end Scheme;
 
 architecture BEHAVIORAL of Scheme is
+   attribute BOX_TYPE   : string ;
    signal XLXN_1    : std_logic_vector (9 downto 0);
    signal XLXN_2    : std_logic_vector (8 downto 0);
    signal XLXN_3    : std_logic_vector (2 downto 0);
-   signal XLXN_4    : std_logic_vector (4 downto 0);
    signal XLXN_5    : std_logic_vector (3 downto 0);
-   signal XLXN_6    : std_logic_vector (2 downto 0);
+   signal XLXN_9    : std_logic;
+   signal XLXN_11   : std_logic;
+   signal XLXN_26   : std_logic_vector (2 downto 0);
+   signal XLXN_28   : std_logic;
+   signal XLXN_29   : std_logic;
+   signal XLXN_30   : std_logic_vector (4 downto 0);
+   signal XLXN_32   : std_logic_vector (7 downto 0);
    component GameMap
       port ( PIX_X   : in    std_logic_vector (9 downto 0); 
              PIX_Y   : in    std_logic_vector (8 downto 0); 
@@ -62,9 +70,32 @@ architecture BEHAVIORAL of Scheme is
              PIX_Y     : out   std_logic_vector (8 downto 0));
    end component;
    
+   component PS2_Kbd
+      port ( PS2_Clk   : in    std_logic; 
+             PS2_Data  : in    std_logic; 
+             Clk_50MHz : in    std_logic; 
+             E0        : out   std_logic; 
+             F0        : out   std_logic; 
+             DO_Rdy    : out   std_logic; 
+             DO        : out   std_logic_vector (7 downto 0); 
+             Clk_Sys   : in    std_logic);
+   end component;
+   
+   component AND3B2
+      port ( I0 : in    std_logic; 
+             I1 : in    std_logic; 
+             I2 : in    std_logic; 
+             O  : out   std_logic);
+   end component;
+   attribute BOX_TYPE of AND3B2 : component is "BLACK_BOX";
+   
    component GameLogic
-      port ( DIV_X   : in    std_logic_vector (4 downto 0); 
+      port ( Clk     : in    std_logic; 
+             F0      : in    std_logic; 
+             DIRdy   : in    std_logic; 
+             DIV_X   : in    std_logic_vector (4 downto 0); 
              DIV_Y   : in    std_logic_vector (3 downto 0); 
+             DI      : in    std_logic_vector (7 downto 0); 
              RGB_MAP : out   std_logic_vector (2 downto 0));
    end component;
    
@@ -72,8 +103,8 @@ begin
    XLXI_3 : GameMap
       port map (PIX_X(9 downto 0)=>XLXN_1(9 downto 0),
                 PIX_Y(8 downto 0)=>XLXN_2(8 downto 0),
-                RGB_MAP(2 downto 0)=>XLXN_6(2 downto 0),
-                DIV_X(4 downto 0)=>XLXN_4(4 downto 0),
+                RGB_MAP(2 downto 0)=>XLXN_26(2 downto 0),
+                DIV_X(4 downto 0)=>XLXN_30(4 downto 0),
                 DIV_Y(3 downto 0)=>XLXN_5(3 downto 0),
                 RGB(2 downto 0)=>XLXN_3(2 downto 0));
    
@@ -88,10 +119,30 @@ begin
                 VGA_R=>VGA_R,
                 VGA_VS=>VGA_VS);
    
-   XLXI_5 : GameLogic
-      port map (DIV_X(4 downto 0)=>XLXN_4(4 downto 0),
+   XLXI_7 : PS2_Kbd
+      port map (Clk_Sys=>Clk_50MHz,
+                Clk_50MHz=>Clk_50MHz,
+                PS2_Clk=>PS2_Clk,
+                PS2_Data=>PS2_Data,
+                DO(7 downto 0)=>XLXN_32(7 downto 0),
+                DO_Rdy=>XLXN_9,
+                E0=>XLXN_11,
+                F0=>XLXN_28);
+   
+   XLXI_8 : AND3B2
+      port map (I0=>XLXN_28,
+                I1=>XLXN_11,
+                I2=>XLXN_9,
+                O=>XLXN_29);
+   
+   XLXI_17 : GameLogic
+      port map (Clk=>Clk_50MHz,
+                DI(7 downto 0)=>XLXN_32(7 downto 0),
+                DIRdy=>XLXN_29,
+                DIV_X(4 downto 0)=>XLXN_30(4 downto 0),
                 DIV_Y(3 downto 0)=>XLXN_5(3 downto 0),
-                RGB_MAP(2 downto 0)=>XLXN_6(2 downto 0));
+                F0=>XLXN_28,
+                RGB_MAP(2 downto 0)=>XLXN_26(2 downto 0));
    
 end BEHAVIORAL;
 

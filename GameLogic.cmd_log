@@ -8,3 +8,52 @@ vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogi
 spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
 vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 
+vhdtdtfi -lib work GameLogic.vhd -prj VGA_GAME -o GameLogic.spl -module GameLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameLogic.spl C:/Users/lab/Desktop/VGA_GAME/GameLogic.sym 

@@ -1,7 +1,7 @@
 #Release 14.7 - par P.20131013 (nt)
 #Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-#Tue May 07 13:40:00 2019
+#Tue May 14 14:12:35 2019
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -139,8 +139,8 @@ G9,,IOB,IO,UNUSED,,0,,,,,,,,,
 G10,,DIFFSI,IP_L10N_0,UNUSED,,0,,,,,,,,,
 G11,,,VCCO_0,,,0,,,,,3.30,,,,
 G12,,,GND,,,,,,,,,,,,
-G13,,DIFFS,IO_L20N_1,UNUSED,,1,,,,,,,,,
-G14,,DIFFM,IO_L20P_1,UNUSED,,1,,,,,,,,,
+G13,PS2_Data,IBUF,IO_L20N_1,INPUT,LVCMOS33,1,,,,NONE,,LOCATED,NO,NONE,
+G14,PS2_Clk,IBUF,IO_L20P_1,INPUT,LVCMOS33,1,,,,NONE,,LOCATED,NO,NONE,
 G15,VGA_B,IOB,IO_L18P_1,OUTPUT,LVTTL,1,8,FAST,NONE**,,,LOCATED,NO,NONE,
 G16,,DIFFS,IO_L18N_1,UNUSED,,1,,,,,,,,,
 G17,,,VCCAUX,,,,,,,,2.5,,,,

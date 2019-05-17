@@ -1,9 +1,11 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue May 07 13:39:18 2019
+// Written by: Map P.20131013 on Tue May 14 14:11:52 2019
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "PS2_Clk" LOCATE = SITE "G14" LEVEL 1;
 COMP "VGA_B" LOCATE = SITE "G15" LEVEL 1;
+COMP "PS2_Data" LOCATE = SITE "G13" LEVEL 1;
 COMP "VGA_G" LOCATE = SITE "H15" LEVEL 1;
 COMP "Clk_50MHz" LOCATE = SITE "C9" LEVEL 1;
 COMP "VGA_R" LOCATE = SITE "H14" LEVEL 1;
