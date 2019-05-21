@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\lab\Desktop\VGA_GAME\Scheme.ncd
-OUTFILE=C:\Users\lab\Desktop\VGA_GAME\Scheme.bit
+INFILE=C:\Users\lab\Desktop\RPG_VHDL_Spartan3E - Kopia\Scheme.ncd
+OUTFILE=C:\Users\lab\Desktop\RPG_VHDL_Spartan3E - Kopia\Scheme.bit
 FAMILY=Spartan3E
 PART=xc3s500e-5fg320
-WORKINGDIR=C:\Users\lab\Desktop\VGA_GAME
+WORKINGDIR=C:\Users\lab\Desktop\RPG_VHDL_Spartan3E - Kopia
 LICENSE=ISE
 USER_INFO=174693031_177724690_210552578_727

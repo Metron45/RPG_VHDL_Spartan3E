@@ -1,10 +1,10 @@
-AR vgadriver behavioral C:/Users/lab/Desktop/VGA_GAME/VGA.vhd sub00/vhpl01 1557835880
-AR gamemap behavioral C:/Users/lab/Desktop/VGA_GAME/Map.vhd sub00/vhpl07 1557835878
-EN vgadriver NULL C:/Users/lab/Desktop/VGA_GAME/VGA.vhd sub00/vhpl00 1557835879
-EN gamelogic NULL C:/Users/lab/Desktop/VGA_GAME/GameLogic.vhd sub00/vhpl08 1557835881
-EN scheme NULL C:/Users/lab/Desktop/VGA_GAME/Scheme.vhf sub00/vhpl04 1557835883
-AR scheme behavioral C:/Users/lab/Desktop/VGA_GAME/Scheme.vhf sub00/vhpl05 1557835884
+AR vgadriver behavioral "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/VGA.vhd" sub00/vhpl01 1558434274
+AR gamemap behavioral "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Map.vhd" sub00/vhpl07 1558434272
+EN vgadriver NULL "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/VGA.vhd" sub00/vhpl00 1558434273
+EN gamelogic NULL "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/GameLogic.vhd" sub00/vhpl08 1558434275
+EN scheme NULL "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.vhf" sub00/vhpl04 1558434277
+AR scheme behavioral "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.vhf" sub00/vhpl05 1558434278
 AR picture behavioral C:/Users/lab/VGA_GAME/Colors.vhd sub00/vhpl03 1554803807
-AR gamelogic behavioral C:/Users/lab/Desktop/VGA_GAME/GameLogic.vhd sub00/vhpl09 1557835882
+AR gamelogic behavioral "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/GameLogic.vhd" sub00/vhpl09 1558434276
 EN picture NULL C:/Users/lab/VGA_GAME/Colors.vhd sub00/vhpl02 1554803806
-EN gamemap NULL C:/Users/lab/Desktop/VGA_GAME/Map.vhd sub00/vhpl06 1557835877
+EN gamemap NULL "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Map.vhd" sub00/vhpl06 1558434271

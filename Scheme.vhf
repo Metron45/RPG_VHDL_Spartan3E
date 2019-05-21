@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Scheme.vhf
--- /___/   /\     Timestamp : 05/14/2019 14:11:14
+-- /___/   /\     Timestamp : 05/21/2019 12:24:28
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Desktop/VGA_GAME/Scheme.vhf -w C:/Users/lab/Desktop/VGA_GAME/Scheme.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.vhf" -w "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.sch"
 --Design Name: Scheme
 --Device: spartan3e
 --Purpose:
@@ -37,18 +37,15 @@ entity Scheme is
 end Scheme;
 
 architecture BEHAVIORAL of Scheme is
-   attribute BOX_TYPE   : string ;
    signal XLXN_1    : std_logic_vector (9 downto 0);
    signal XLXN_2    : std_logic_vector (8 downto 0);
    signal XLXN_3    : std_logic_vector (2 downto 0);
    signal XLXN_5    : std_logic_vector (3 downto 0);
-   signal XLXN_9    : std_logic;
-   signal XLXN_11   : std_logic;
    signal XLXN_26   : std_logic_vector (2 downto 0);
    signal XLXN_28   : std_logic;
-   signal XLXN_29   : std_logic;
    signal XLXN_30   : std_logic_vector (4 downto 0);
    signal XLXN_32   : std_logic_vector (7 downto 0);
+   signal XLXN_34   : std_logic;
    component GameMap
       port ( PIX_X   : in    std_logic_vector (9 downto 0); 
              PIX_Y   : in    std_logic_vector (8 downto 0); 
@@ -80,14 +77,6 @@ architecture BEHAVIORAL of Scheme is
              DO        : out   std_logic_vector (7 downto 0); 
              Clk_Sys   : in    std_logic);
    end component;
-   
-   component AND3B2
-      port ( I0 : in    std_logic; 
-             I1 : in    std_logic; 
-             I2 : in    std_logic; 
-             O  : out   std_logic);
-   end component;
-   attribute BOX_TYPE of AND3B2 : component is "BLACK_BOX";
    
    component GameLogic
       port ( Clk     : in    std_logic; 
@@ -125,20 +114,14 @@ begin
                 PS2_Clk=>PS2_Clk,
                 PS2_Data=>PS2_Data,
                 DO(7 downto 0)=>XLXN_32(7 downto 0),
-                DO_Rdy=>XLXN_9,
-                E0=>XLXN_11,
+                DO_Rdy=>XLXN_34,
+                E0=>open,
                 F0=>XLXN_28);
    
-   XLXI_8 : AND3B2
-      port map (I0=>XLXN_28,
-                I1=>XLXN_11,
-                I2=>XLXN_9,
-                O=>XLXN_29);
-   
-   XLXI_17 : GameLogic
+   XLXI_18 : GameLogic
       port map (Clk=>Clk_50MHz,
                 DI(7 downto 0)=>XLXN_32(7 downto 0),
-                DIRdy=>XLXN_29,
+                DIRdy=>XLXN_34,
                 DIV_X(4 downto 0)=>XLXN_30(4 downto 0),
                 DIV_Y(3 downto 0)=>XLXN_5(3 downto 0),
                 F0=>XLXN_28,

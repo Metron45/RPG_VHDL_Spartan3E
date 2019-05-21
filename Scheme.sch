@@ -16,19 +16,13 @@
         <signal name="VGA_HS" />
         <signal name="VGA_VS" />
         <signal name="XLXN_5(3:0)" />
-        <signal name="XLXN_9" />
-        <signal name="XLXN_10" />
-        <signal name="XLXN_11" />
-        <signal name="XLXN_12" />
         <signal name="PS2_Clk" />
         <signal name="PS2_Data" />
         <signal name="XLXN_26(2:0)" />
-        <signal name="XLXN_27" />
         <signal name="XLXN_28" />
-        <signal name="XLXN_29" />
         <signal name="XLXN_30(4:0)" />
-        <signal name="XLXN_31(3:0)" />
         <signal name="XLXN_32(7:0)" />
+        <signal name="XLXN_34" />
         <port polarity="Input" name="Clk_50MHz" />
         <port polarity="Output" name="VGA_R" />
         <port polarity="Output" name="VGA_G" />
@@ -82,21 +76,8 @@
             <rect width="256" x="64" y="-256" height="256" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
         </blockdef>
-        <blockdef name="and3b2">
-            <timestamp>2000-1-1T10:10:10</timestamp>
-            <line x2="40" y1="-64" y2="-64" x1="0" />
-            <circle r="12" cx="52" cy="-64" />
-            <line x2="40" y1="-128" y2="-128" x1="0" />
-            <circle r="12" cx="52" cy="-128" />
-            <line x2="64" y1="-192" y2="-192" x1="0" />
-            <line x2="192" y1="-128" y2="-128" x1="256" />
-            <line x2="64" y1="-64" y2="-192" x1="64" />
-            <arc ex="144" ey="-176" sx="144" sy="-80" r="48" cx="144" cy="-128" />
-            <line x2="64" y1="-80" y2="-80" x1="144" />
-            <line x2="144" y1="-176" y2="-176" x1="64" />
-        </blockdef>
         <blockdef name="GameLogic">
-            <timestamp>2019-5-14T12:10:49</timestamp>
+            <timestamp>2019-5-21T10:24:12</timestamp>
             <rect width="304" x="64" y="-384" height="384" />
             <line x2="0" y1="-352" y2="-352" x1="64" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
@@ -133,22 +114,16 @@
             <blockpin signalname="PS2_Clk" name="PS2_Clk" />
             <blockpin signalname="PS2_Data" name="PS2_Data" />
             <blockpin signalname="Clk_50MHz" name="Clk_50MHz" />
-            <blockpin signalname="XLXN_11" name="E0" />
+            <blockpin name="E0" />
             <blockpin signalname="XLXN_28" name="F0" />
-            <blockpin signalname="XLXN_9" name="DO_Rdy" />
+            <blockpin signalname="XLXN_34" name="DO_Rdy" />
             <blockpin signalname="XLXN_32(7:0)" name="DO(7:0)" />
             <blockpin signalname="Clk_50MHz" name="Clk_Sys" />
         </block>
-        <block symbolname="and3b2" name="XLXI_8">
-            <blockpin signalname="XLXN_28" name="I0" />
-            <blockpin signalname="XLXN_11" name="I1" />
-            <blockpin signalname="XLXN_9" name="I2" />
-            <blockpin signalname="XLXN_29" name="O" />
-        </block>
-        <block symbolname="GameLogic" name="XLXI_17">
+        <block symbolname="GameLogic" name="XLXI_18">
             <blockpin signalname="Clk_50MHz" name="Clk" />
             <blockpin signalname="XLXN_28" name="F0" />
-            <blockpin signalname="XLXN_29" name="DIRdy" />
+            <blockpin signalname="XLXN_34" name="DIRdy" />
             <blockpin signalname="XLXN_30(4:0)" name="DIV_X(4:0)" />
             <blockpin signalname="XLXN_5(3:0)" name="DIV_Y(3:0)" />
             <blockpin signalname="XLXN_32(7:0)" name="DI(7:0)" />
@@ -213,12 +188,6 @@
         </instance>
         <instance x="2128" y="1088" name="XLXI_4" orien="R0">
         </instance>
-        <instance x="624" y="2432" name="XLXI_8" orien="R0" />
-        <branch name="XLXN_11">
-            <wire x2="608" y1="1952" y2="1952" x1="560" />
-            <wire x2="608" y1="1952" y2="2304" x1="608" />
-            <wire x2="624" y1="2304" y2="2304" x1="608" />
-        </branch>
         <branch name="PS2_Clk">
             <wire x2="464" y1="880" y2="880" x1="112" />
             <wire x2="112" y1="880" y2="1888" x1="112" />
@@ -229,12 +198,6 @@
         <iomarker fontsize="28" x="448" y="640" name="PS2_Clk" orien="R180" />
         <instance x="176" y="2112" name="XLXI_7" orien="R0">
         </instance>
-        <branch name="XLXN_9">
-            <wire x2="640" y1="2080" y2="2080" x1="560" />
-            <wire x2="640" y1="2080" y2="2224" x1="640" />
-            <wire x2="624" y1="2224" y2="2240" x1="624" />
-            <wire x2="640" y1="2224" y2="2224" x1="624" />
-        </branch>
         <branch name="PS2_Data">
             <wire x2="96" y1="352" y2="1952" x1="96" />
             <wire x2="176" y1="1952" y2="1952" x1="96" />
@@ -247,28 +210,12 @@
             <wire x2="1728" y1="1296" y2="1296" x1="1472" />
             <wire x2="1728" y1="1296" y2="1968" x1="1728" />
         </branch>
-        <instance x="1200" y="1952" name="XLXI_17" orien="R0">
-        </instance>
         <branch name="XLXN_26(2:0)">
             <wire x2="1088" y1="1232" y2="1232" x1="1008" />
             <wire x2="1008" y1="1232" y2="1376" x1="1008" />
             <wire x2="1696" y1="1376" y2="1376" x1="1008" />
             <wire x2="1696" y1="1376" y2="1600" x1="1696" />
             <wire x2="1696" y1="1600" y2="1600" x1="1632" />
-        </branch>
-        <branch name="XLXN_28">
-            <wire x2="624" y1="2016" y2="2016" x1="560" />
-            <wire x2="624" y1="2016" y2="2176" x1="624" />
-            <wire x2="624" y1="2176" y2="2176" x1="560" />
-            <wire x2="560" y1="2176" y2="2368" x1="560" />
-            <wire x2="624" y1="2368" y2="2368" x1="560" />
-            <wire x2="1200" y1="1664" y2="1664" x1="624" />
-            <wire x2="624" y1="1664" y2="2016" x1="624" />
-        </branch>
-        <branch name="XLXN_29">
-            <wire x2="960" y1="2304" y2="2304" x1="880" />
-            <wire x2="960" y1="1728" y2="2304" x1="960" />
-            <wire x2="1200" y1="1728" y2="1728" x1="960" />
         </branch>
         <branch name="XLXN_30(4:0)">
             <wire x2="1200" y1="1792" y2="1792" x1="1136" />
@@ -282,5 +229,17 @@
             <wire x2="880" y1="1888" y2="1920" x1="880" />
             <wire x2="1200" y1="1920" y2="1920" x1="880" />
         </branch>
+        <branch name="XLXN_28">
+            <wire x2="624" y1="2016" y2="2016" x1="560" />
+            <wire x2="1200" y1="1664" y2="1664" x1="624" />
+            <wire x2="624" y1="1664" y2="2016" x1="624" />
+        </branch>
+        <branch name="XLXN_34">
+            <wire x2="864" y1="2080" y2="2080" x1="560" />
+            <wire x2="864" y1="1728" y2="2080" x1="864" />
+            <wire x2="1200" y1="1728" y2="1728" x1="864" />
+        </branch>
+        <instance x="1200" y="1952" name="XLXI_18" orien="R0">
+        </instance>
     </sheet>
 </drawing>

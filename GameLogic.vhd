@@ -75,10 +75,11 @@ constant Territory : ARRAY_2D := (  "010", "010", "010", "010", "010", "010", "0
                                     "001", "001", "001", "001", "001", "001", "001", "001", "001", "001", "001", "001", "001", "001", "001", "001", "001", "001", "001", "001");
                                     
                                     
- type state_type is ( sReady ,sMove, sWait );
+ type state_type is ( sReady , sWaitF0, sWaitRepeat );
  signal State, NextState : state_type;
  signal regDI : STD_LOGIC_VECTOR (7 downto 0);
  signal moved : std_logic := '0';
+ 
  
 begin
 x <= to_integer( unsigned( DIV_X ) );
@@ -86,13 +87,6 @@ y <= to_integer( unsigned( DIV_Y ) );
 
 regDI <= DI when rising_edge( Clk ) and State = sReady;
 
-
-process ( Clk )
-  begin
-     if rising_edge( Clk ) then
-         State <= NextState;
-     end if;
-  end process;
 
 process(x,y, player_x, player_y, RGB_PLAYER)
 begin
@@ -103,29 +97,34 @@ begin
 end process;
 
 
-process ( State, DIRdy, regDI )
+
+process (Clk)
 begin
- 
- NextState <= State;
 
- case State is
-   when sReady =>
-     if DIRdy = '1' then
-       NextState <= sMove;
-     end if;
-     
-   when sMove =>
-      if  regDI = X"1D" then
-            player_y <= player_y -1;
-            NextState <= sWait;
-      end if;
-     
-   when sWait =>
-      if DIRdy = '0' then
-         NextState <= sReady;
-      end if;
+   if(rising_edge(Clk)) then
+      
+         if DIRdy = '1' then
+            if regDI = X"1D" and player_y >= 1 and F0 = '1' then
+               if Territory( (player_y-1)*20 + player_x ) /= "001" then
+                  player_y <= player_y -1;
+               end if;
+            elsif regDI = X"1B" and player_y <= 13 and F0 = '1' then
+               if Territory( (player_y+1)*20 + player_x ) /= "001" then
+                  player_y <= player_y + 1;
+               end if;
+            elsif regDI = X"1C" and player_x >= 1 and F0 = '1' then
+               if Territory( (player_y)*20 + player_x - 1 ) /= "001" then
+                  player_x <= player_x - 1;
+               end if;
+            elsif regDI = X"23" and player_x <= 18 and F0 = '1' then
+               if Territory( (player_y)*20 + player_x + 1) /= "001" then
+                  player_x <= player_x + 1;
+               end if;
+            end if;
 
- end case;
+         end if;
+
+   end if;
 end process;
 
 end Behavioral;

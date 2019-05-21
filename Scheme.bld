@@ -5,8 +5,10 @@ Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
 ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 Scheme.ngc
 Scheme.ngd
 
-Reading NGO file "C:/Users/lab/Desktop/VGA_GAME/Scheme.ngc" ...
-Loading design module "C:\Users\lab\Desktop\VGA_GAME/PS2_Kbd.ngc"...
+Reading NGO file "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.ngc"
+...
+Loading design module "C:\Users\lab\Desktop\RPG_VHDL_Spartan3E -
+Kopia/PS2_Kbd.ngc"...
 Gathering constraint information from source properties...
 Done.
 
@@ -32,7 +34,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 122680 kilobytes
+Total memory usage is 115292 kilobytes
 
 Writing NGD file "Scheme.ngd" ...
 Total REAL time to NGDBUILD completion:  2 sec

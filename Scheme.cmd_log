@@ -276,3 +276,93 @@ map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Scheme_
 par -w -intstyle ise -ol high -t 1 Scheme_map.ncd Scheme.ncd Scheme.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Scheme.twx Scheme.ncd -o Scheme.twr Scheme.pcf -ucf GenIO.ucf 
 bitgen -intstyle ise -f Scheme.ut Scheme.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/Scheme.xst" -ofn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/Scheme.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 Scheme.ngc Scheme.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Scheme_map.ncd Scheme.ngd Scheme.pcf 
+par -w -intstyle ise -ol high -t 1 Scheme_map.ncd Scheme.ncd Scheme.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Scheme.twx Scheme.ncd -o Scheme.twr Scheme.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f Scheme.ut Scheme.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/Scheme.xst" -ofn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/Scheme.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 Scheme.ngc Scheme.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Scheme_map.ncd Scheme.ngd Scheme.pcf 
+par -w -intstyle ise -ol high -t 1 Scheme_map.ncd Scheme.ncd Scheme.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Scheme.twx Scheme.ncd -o Scheme.twr Scheme.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f Scheme.ut Scheme.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/Scheme.xst" -ofn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/Scheme.syr" 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/Scheme.xst" -ofn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/Scheme.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 Scheme.ngc Scheme.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Scheme_map.ncd Scheme.ngd Scheme.pcf 
+par -w -intstyle ise -ol high -t 1 Scheme_map.ncd Scheme.ncd Scheme.pcf 
+bitgen -intstyle ise -f Scheme.ut Scheme.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/Scheme.xst" -ofn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/Scheme.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 Scheme.ngc Scheme.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Scheme_map.ncd Scheme.ngd Scheme.pcf 
+par -w -intstyle ise -ol high -t 1 Scheme_map.ncd Scheme.ncd Scheme.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Scheme.twx Scheme.ncd -o Scheme.twr Scheme.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f Scheme.ut Scheme.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/Scheme.xst" -ofn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/Scheme.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 Scheme.ngc Scheme.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Scheme_map.ncd Scheme.ngd Scheme.pcf 
+par -w -intstyle ise -ol high -t 1 Scheme_map.ncd Scheme.ncd Scheme.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Scheme.twx Scheme.ncd -o Scheme.twr Scheme.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f Scheme.ut Scheme.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/Scheme.xst" -ofn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/Scheme.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 Scheme.ngc Scheme.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Scheme_map.ncd Scheme.ngd Scheme.pcf 
+par -w -intstyle ise -ol high -t 1 Scheme_map.ncd Scheme.ncd Scheme.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Scheme.twx Scheme.ncd -o Scheme.twr Scheme.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f Scheme.ut Scheme.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.xst" -ofn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 "Scheme.ngc" Scheme.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Scheme_map.ncd Scheme.ngd Scheme.pcf 
+par -w -intstyle ise -ol high -t 1 Scheme_map.ncd Scheme.ncd Scheme.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Scheme.twx Scheme.ncd -o Scheme.twr Scheme.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f Scheme.ut Scheme.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.xst" -ofn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 "Scheme.ngc" Scheme.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Scheme_map.ncd Scheme.ngd Scheme.pcf 
+par -w -intstyle ise -ol high -t 1 Scheme_map.ncd Scheme.ncd Scheme.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Scheme.twx Scheme.ncd -o Scheme.twr Scheme.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f Scheme.ut Scheme.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.xst" -ofn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 "Scheme.ngc" Scheme.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Scheme_map.ncd Scheme.ngd Scheme.pcf 
+par -w -intstyle ise -ol high -t 1 Scheme_map.ncd Scheme.ncd Scheme.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Scheme.twx Scheme.ncd -o Scheme.twr Scheme.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f Scheme.ut Scheme.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.xst" -ofn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 "Scheme.ngc" Scheme.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Scheme_map.ncd Scheme.ngd Scheme.pcf 
+par -w -intstyle ise -ol high -t 1 Scheme_map.ncd Scheme.ncd Scheme.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Scheme.twx Scheme.ncd -o Scheme.twr Scheme.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f Scheme.ut Scheme.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.xst" -ofn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 "Scheme.ngc" Scheme.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Scheme_map.ncd Scheme.ngd Scheme.pcf 
+par -w -intstyle ise -ol high -t 1 Scheme_map.ncd Scheme.ncd Scheme.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Scheme.twx Scheme.ncd -o Scheme.twr Scheme.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f Scheme.ut Scheme.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.xst" -ofn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 "Scheme.ngc" Scheme.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Scheme_map.ncd Scheme.ngd Scheme.pcf 
+par -w -intstyle ise -ol high -t 1 Scheme_map.ncd Scheme.ncd Scheme.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Scheme.twx Scheme.ncd -o Scheme.twr Scheme.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f Scheme.ut Scheme.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.xst" -ofn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 "Scheme.ngc" Scheme.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Scheme_map.ncd Scheme.ngd Scheme.pcf 
+par -w -intstyle ise -ol high -t 1 Scheme_map.ncd Scheme.ncd Scheme.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Scheme.twx Scheme.ncd -o Scheme.twr Scheme.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f Scheme.ut Scheme.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.xst" -ofn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 "Scheme.ngc" Scheme.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Scheme_map.ncd Scheme.ngd Scheme.pcf 
+par -w -intstyle ise -ol high -t 1 Scheme_map.ncd Scheme.ncd Scheme.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Scheme.twx Scheme.ncd -o Scheme.twr Scheme.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f Scheme.ut Scheme.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.xst" -ofn "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 "Scheme.ngc" Scheme.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Scheme_map.ncd Scheme.ngd Scheme.pcf 
+par -w -intstyle ise -ol high -t 1 Scheme_map.ncd Scheme.ncd Scheme.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Scheme.twx Scheme.ncd -o Scheme.twr Scheme.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f Scheme.ut Scheme.ncd 

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: Scheme.prj
 
@@ -104,14 +104,14 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/lab/Desktop/VGA_GAME/Map.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Map.vhd" in Library work.
 Architecture behavioral of Entity gamemap is up to date.
-Compiling vhdl file "C:/Users/lab/Desktop/VGA_GAME/VGA.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/VGA.vhd" in Library work.
 Architecture behavioral of Entity vgadriver is up to date.
-Compiling vhdl file "C:/Users/lab/Desktop/VGA_GAME/GameLogic.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/GameLogic.vhd" in Library work.
 Entity <gamelogic> compiled.
 Entity <gamelogic> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/lab/Desktop/VGA_GAME/Scheme.vhf" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.vhf" in Library work.
 Entity <scheme> compiled.
 Entity <scheme> (Architecture <behavioral>) compiled.
 
@@ -131,7 +131,8 @@ Analyzing hierarchy for entity <GameLogic> in library <work> (architecture <beha
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <Scheme> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/VGA_GAME/Scheme.vhf" line 122: Instantiating black box module <PS2_Kbd>.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.vhf" line 111: Unconnected output port 'E0' of component 'PS2_Kbd'.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.vhf" line 111: Instantiating black box module <PS2_Kbd>.
 Entity <Scheme> analyzed. Unit <Scheme> generated.
 
 Analyzing Entity <GameMap> in library <work> (Architecture <behavioral>).
@@ -151,7 +152,7 @@ Entity <GameLogic> analyzed. Unit <GameLogic> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <GameMap>.
-    Related source file is "C:/Users/lab/Desktop/VGA_GAME/Map.vhd".
+    Related source file is "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Map.vhd".
 WARNING:Xst:737 - Found 5-bit latch for signal <div_x_sig>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 4-bit latch for signal <div_y_sig>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -231,7 +232,7 @@ Unit <GameMap> synthesized.
 
 
 Synthesizing Unit <VGAdriver>.
-    Related source file is "C:/Users/lab/Desktop/VGA_GAME/VGA.vhd".
+    Related source file is "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/VGA.vhd".
     Found 1-bit register for signal <clk_25>.
     Found 10-bit up counter for signal <h_cnt>.
     Found 10-bit comparator less for signal <h_cnt$cmp_lt0000> created at line 46.
@@ -254,39 +255,51 @@ Unit <VGAdriver> synthesized.
 
 
 Synthesizing Unit <GameLogic>.
-    Related source file is "C:/Users/lab/Desktop/VGA_GAME/GameLogic.vhd".
-WARNING:Xst:647 - Input <F0> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <player_x> is used but never assigned. This sourceless signal will be automatically connected to value 01100.
+    Related source file is "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/GameLogic.vhd".
 WARNING:Xst:1780 - Signal <moved> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <State> is used but never assigned. This sourceless signal will be automatically connected to value 00.
 WARNING:Xst:653 - Signal <RGB_PLAYER> is used but never assigned. This sourceless signal will be automatically connected to value 000.
-    Found finite state machine <FSM_0> for signal <State>.
-    -----------------------------------------------------------------------
-    | States             | 3                                              |
-    | Transitions        | 6                                              |
-    | Inputs             | 2                                              |
-    | Outputs            | 2                                              |
-    | Clock              | Clk                       (rising_edge)        |
-    | Power Up State     | sready                                         |
-    | Encoding           | automatic                                      |
-    | Implementation     | LUT                                            |
-    -----------------------------------------------------------------------
-WARNING:Xst:737 - Found 4-bit latch for signal <player_y>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 4-bit subtractor for signal <player_y$sub0000> created at line 119.
+WARNING:Xst:1780 - Signal <NextState> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Using one-hot encoding for signal <$mux0003>.
+    Using one-hot encoding for signal <$mux0004>.
+    Using one-hot encoding for signal <$mux0001>.
+    Using one-hot encoding for signal <$mux0002>.
+WARNING:Xst:643 - "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/GameLogic.vhd" line 108: The result of a 5x6-bit multiplication is partially used. Only the 10 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 280x3-bit ROM for signal <$mux0001> created at line 108.
+    Found 5x6-bit multiplier for signal <$mult0000> created at line 108.
+    Found 5-bit subtractor for signal <mult0000$addsub0000> created at line 108.
+    Found 10-bit adder carry out for signal <mux0001$addsub0001> created at line 108.
+    Found 4-bit adder for signal <mux0002$addsub0000> created at line 112.
+    Found 9-bit adder for signal <mux0002$addsub0001> created at line 112.
+    Found 4x5-bit multiplier for signal <mux0002$mult0000> created at line 112.
+    Found 9-bit adder for signal <mux0003$add0000> created at line 116.
+    Found 4x5-bit multiplier for signal <mux0003$mult0000> created at line 116.
+    Found 5-bit updown counter for signal <player_x>.
+    Found 4-bit comparator greatequal for signal <player_x$cmp_ge0000> created at line 107.
+    Found 5-bit comparator greatequal for signal <player_x$cmp_ge0001> created at line 113.
+    Found 5-bit comparator greater for signal <player_x$cmp_gt0000> created at line 117.
+    Found 4-bit comparator lessequal for signal <player_x$cmp_le0000> created at line 109.
+    Found 5-bit comparator less for signal <player_x$cmp_lt0000> created at line 113.
+    Found 4-bit updown counter for signal <player_y>.
+    Found 4-bit comparator greater for signal <player_y$cmp_gt0000> created at line 109.
+    Found 4-bit comparator less for signal <player_y$cmp_lt0000> created at line 107.
     Found 8-bit register for signal <regDI>.
-    Found 9-bit adder for signal <RGB_MAP$addsub0000> created at line 101.
-    Found 4-bit comparator equal for signal <RGB_MAP$cmp_eq0001> created at line 99.
-    Found 4x5-bit multiplier for signal <RGB_MAP$mult0000> created at line 101.
+    Found 9-bit adder for signal <RGB_MAP$addsub0000> created at line 95.
+    Found 5-bit comparator equal for signal <RGB_MAP$cmp_eq0000> created at line 93.
+    Found 4-bit comparator equal for signal <RGB_MAP$cmp_eq0001> created at line 93.
+    Found 4x5-bit multiplier for signal <RGB_MAP$mult0000> created at line 95.
     Summary:
-	inferred   1 Finite State Machine(s).
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
 	inferred   8 D-type flip-flop(s).
-	inferred   2 Adder/Subtractor(s).
-	inferred   1 Multiplier(s).
-	inferred   1 Comparator(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred   4 Multiplier(s).
+	inferred   9 Comparator(s).
 Unit <GameLogic> synthesized.
 
 
 Synthesizing Unit <Scheme>.
-    Related source file is "C:/Users/lab/Desktop/VGA_GAME/Scheme.vhf".
+    Related source file is "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.vhf".
 Unit <Scheme> synthesized.
 
 
@@ -294,26 +307,41 @@ Unit <Scheme> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 1
- 4x5-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 37
+# ROMs                                                 : 1
+ 280x3-bit ROM                                         : 1
+# Multipliers                                          : 4
+ 4x5-bit multiplier                                    : 3
+ 5x6-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 41
+ 10-bit adder carry out                                : 1
  10-bit subtractor                                     : 20
- 4-bit subtractor                                      : 1
- 9-bit adder                                           : 1
+ 4-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+ 9-bit adder                                           : 3
  9-bit subtractor                                      : 15
-# Counters                                             : 2
+# Counters                                             : 4
  10-bit up counter                                     : 2
+ 4-bit updown counter                                  : 1
+ 5-bit updown counter                                  : 1
 # Registers                                            : 2
  1-bit register                                        : 1
  8-bit register                                        : 1
-# Latches                                              : 3
- 4-bit latch                                           : 2
+# Latches                                              : 2
+ 4-bit latch                                           : 1
  5-bit latch                                           : 1
-# Comparators                                          : 44
+# Comparators                                          : 52
  10-bit comparator greatequal                          : 2
  10-bit comparator less                                : 24
  10-bit comparator lessequal                           : 2
  4-bit comparator equal                                : 1
+ 4-bit comparator greatequal                           : 1
+ 4-bit comparator greater                              : 1
+ 4-bit comparator less                                 : 1
+ 4-bit comparator lessequal                            : 1
+ 5-bit comparator equal                                : 1
+ 5-bit comparator greatequal                           : 1
+ 5-bit comparator greater                              : 1
+ 5-bit comparator less                                 : 1
  9-bit comparator less                                 : 15
 
 =========================================================================
@@ -322,15 +350,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-Analyzing FSM <FSM_0> for best encoding.
-Optimizing FSM <XLXI_17/State/FSM> on signal <State[1:3]> with one-hot encoding.
---------------------
- State  | Encoding
---------------------
- sready | 001
- smove  | 010
- swait  | 100
---------------------
 Reading core <PS2_Kbd.ngc>.
 Loading core <PS2_Kbd> for timing and area information for instance <XLXI_7>.
 
@@ -338,26 +357,40 @@ Loading core <PS2_Kbd> for timing and area information for instance <XLXI_7>.
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# FSMs                                                 : 1
-# Multipliers                                          : 1
- 4x5-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 37
+# ROMs                                                 : 1
+ 280x3-bit ROM                                         : 1
+# Multipliers                                          : 4
+ 4x5-bit multiplier                                    : 3
+ 5x6-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 41
+ 10-bit adder carry out                                : 1
  10-bit subtractor                                     : 20
- 4-bit subtractor                                      : 1
- 9-bit adder                                           : 1
+ 4-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+ 9-bit adder                                           : 3
  9-bit subtractor                                      : 15
-# Counters                                             : 2
+# Counters                                             : 4
  10-bit up counter                                     : 2
+ 4-bit updown counter                                  : 1
+ 5-bit updown counter                                  : 1
 # Registers                                            : 9
  Flip-Flops                                            : 9
-# Latches                                              : 3
- 4-bit latch                                           : 2
+# Latches                                              : 2
+ 4-bit latch                                           : 1
  5-bit latch                                           : 1
-# Comparators                                          : 44
+# Comparators                                          : 52
  10-bit comparator greatequal                          : 2
  10-bit comparator less                                : 24
  10-bit comparator lessequal                           : 2
  4-bit comparator equal                                : 1
+ 4-bit comparator greatequal                           : 1
+ 4-bit comparator greater                              : 1
+ 4-bit comparator less                                 : 1
+ 4-bit comparator lessequal                            : 1
+ 5-bit comparator equal                                : 1
+ 5-bit comparator greatequal                           : 1
+ 5-bit comparator greater                              : 1
+ 5-bit comparator less                                 : 1
  9-bit comparator less                                 : 15
 
 =========================================================================
@@ -370,13 +403,13 @@ Optimizing unit <Scheme> ...
 
 Optimizing unit <VGAdriver> ...
 
-Optimizing unit <GameMap> ...
-
 Optimizing unit <GameLogic> ...
+
+Optimizing unit <GameMap> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Scheme, actual ratio is 1.
+Found area constraint ratio of 100 (+ 5) on block Scheme, actual ratio is 2.
 
 Final Macro Processing ...
 
@@ -384,8 +417,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 31
- Flip-Flops                                            : 31
+# Registers                                            : 38
+ Flip-Flops                                            : 38
 
 =========================================================================
 
@@ -414,35 +447,37 @@ Design Statistics
 # IOs                              : 8
 
 Cell Usage :
-# BELS                             : 231
-#      AND3B2                      : 1
+# BELS                             : 340
 #      GND                         : 2
 #      INV                         : 12
-#      LUT1                        : 30
-#      LUT2                        : 24
-#      LUT3                        : 18
+#      LUT1                        : 33
+#      LUT2                        : 29
+#      LUT2_D                      : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 32
 #      LUT3_D                      : 1
-#      LUT4                        : 49
+#      LUT3_L                      : 3
+#      LUT4                        : 86
 #      LUT4_D                      : 1
-#      LUT4_L                      : 5
-#      MUXCY                       : 39
-#      MUXF5                       : 8
+#      LUT4_L                      : 6
+#      MUXCY                       : 59
+#      MUXF5                       : 12
 #      VCC                         : 2
-#      XORCY                       : 39
-# FlipFlops/Latches                : 81
+#      XORCY                       : 60
+# FlipFlops/Latches                : 84
 #      FD                          : 11
-#      FDE                         : 24
-#      FDR                         : 13
+#      FDE                         : 33
+#      FDR                         : 12
 #      FDRE                        : 19
-#      FDS                         : 1
 #      LD                          : 9
-#      LDE                         : 4
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 7
 #      IBUF                        : 2
 #      OBUF                        : 5
+# MULTs                            : 1
+#      MULT18X18SIO                : 1
 =========================================================================
 
 Device utilization summary:
@@ -450,11 +485,12 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                       82  out of   4656     1%  
- Number of Slice Flip Flops:             81  out of   9312     0%  
- Number of 4 input LUTs:                140  out of   9312     1%  
+ Number of Slices:                      116  out of   4656     2%  
+ Number of Slice Flip Flops:             84  out of   9312     0%  
+ Number of 4 input LUTs:                205  out of   9312     2%  
  Number of IOs:                           8
  Number of bonded IOBs:                   8  out of    232     3%  
+ Number of MULT18X18SIOs:                 1  out of     20     5%  
  Number of GCLKs:                         2  out of     24     8%  
 
 ---------------------------
@@ -478,11 +514,10 @@ Clock Information:
 -----------------------------------------------------+----------------------------+-------+
 Clock Signal                                         | Clock buffer(FF name)      | Load  |
 -----------------------------------------------------+----------------------------+-------+
-Clk_50MHz                                            | BUFGP                      | 48    |
+Clk_50MHz                                            | BUFGP                      | 55    |
 XLXI_4/clk_251                                       | BUFG                       | 20    |
 XLXI_3/div_x_sig_not0001(XLXI_3/div_x_sig_not00011:O)| NONE(*)(XLXI_3/div_x_sig_4)| 5     |
 XLXI_3/div_y_sig_not0001(XLXI_3/div_y_sig_not00011:O)| NONE(*)(XLXI_3/div_y_sig_3)| 4     |
-XLXI_17/State_FSM_FFd2                               | NONE(XLXI_17/player_y_3)   | 4     |
 -----------------------------------------------------+----------------------------+-------+
 (*) These 2 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -497,9 +532,9 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 5.207ns (Maximum Frequency: 192.060MHz)
+   Minimum period: 11.809ns (Maximum Frequency: 84.684MHz)
    Minimum input arrival time before clock: 3.490ns
-   Maximum output required time after clock: 11.125ns
+   Maximum output required time after clock: 10.491ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -508,73 +543,56 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk_50MHz'
-  Clock period: 5.207ns (frequency: 192.060MHz)
-  Total number of paths / destination ports: 334 / 91
+  Clock period: 11.809ns (frequency: 84.684MHz)
+  Total number of paths / destination ports: 6000 / 97
 -------------------------------------------------------------------------
-Delay:               5.207ns (Levels of Logic = 3)
-  Source:            XLXI_7/cnt8b_4 (FF)
-  Destination:       XLXI_7/cntMod11_0 (FF)
+Delay:               11.809ns (Levels of Logic = 7)
+  Source:            XLXI_18/player_y_0 (FF)
+  Destination:       XLXI_18/player_y_3 (FF)
   Source Clock:      Clk_50MHz rising
   Destination Clock: Clk_50MHz rising
 
-  Data Path: XLXI_7/cnt8b_4 to XLXI_7/cntMod11_0
+  Data Path: XLXI_18/player_y_0 to XLXI_18/player_y_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.514   0.532  cnt8b_4 (cnt8b<4>)
-     LUT4:I0->O            1   0.612   0.426  PS_Samp_cmp_eq00009 (PS_Samp_cmp_eq00009)
-     LUT2:I1->O            7   0.612   0.605  PS_Samp_cmp_eq000010 (PS_Samp)
-     LUT4:I3->O            4   0.612   0.499  cntMod11_or000016 (cntMod11_or0000)
-     FDRE:R                    0.795          cntMod11_0
+     FDE:C->Q             23   0.514   1.025  XLXI_18/player_y_0 (XLXI_18/player_y_0)
+     LUT4:I3->O           14   0.612   0.850  XLXI_18/Msub_mult0000_addsub0000_xor<4>11 (XLXI_18/mult0000_addsub0000<4>)
+     MULT18X18SIO:A4->P6    1   3.632   0.509  XLXI_18/Mmult__mult0000 (XLXI_18/_mult0000<6>)
+     LUT1:I0->O            1   0.612   0.000  XLXI_18/Madd_mux0001_addsub0001_cy<6>_rt (XLXI_18/Madd_mux0001_addsub0001_cy<6>_rt)
+     MUXCY:S->O            1   0.404   0.000  XLXI_18/Madd_mux0001_addsub0001_cy<6> (XLXI_18/Madd_mux0001_addsub0001_cy<6>)
+     XORCY:CI->O           1   0.699   0.357  XLXI_18/Madd_mux0001_addsub0001_xor<7> (XLXI_18/mux0001_addsub0001<7>)
+     MUXF5:S->O            1   0.641   0.360  XLXI_18/player_y_not000211_SW1 (N26)
+     LUT4:I3->O            4   0.612   0.499  XLXI_18/player_y_not0002125 (XLXI_18/player_y_not0002)
+     FDE:CE                    0.483          XLXI_18/player_y_0
     ----------------------------------------
-    Total                      5.207ns (3.145ns logic, 2.062ns route)
-                                       (60.4% logic, 39.6% route)
+    Total                     11.809ns (8.209ns logic, 3.600ns route)
+                                       (69.5% logic, 30.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'XLXI_4/clk_251'
-  Clock period: 5.161ns (frequency: 193.744MHz)
+  Clock period: 5.541ns (frequency: 180.486MHz)
   Total number of paths / destination ports: 480 / 50
 -------------------------------------------------------------------------
-Delay:               5.161ns (Levels of Logic = 3)
-  Source:            XLXI_4/h_cnt_9 (FF)
+Delay:               5.541ns (Levels of Logic = 4)
+  Source:            XLXI_4/h_cnt_2 (FF)
   Destination:       XLXI_4/v_cnt_9 (FF)
   Source Clock:      XLXI_4/clk_251 rising
   Destination Clock: XLXI_4/clk_251 rising
 
-  Data Path: XLXI_4/h_cnt_9 to XLXI_4/v_cnt_9
+  Data Path: XLXI_4/h_cnt_2 to XLXI_4/v_cnt_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              7   0.514   0.754  XLXI_4/h_cnt_9 (XLXI_4/h_cnt_9)
-     LUT2:I0->O            2   0.612   0.410  XLXI_4/h_cnt_cmp_lt000023 (XLXI_4/h_cnt_cmp_lt000023)
-     LUT4_L:I2->LO         1   0.612   0.103  XLXI_4/h_cnt_cmp_lt0000234 (XLXI_4/h_cnt_cmp_lt0000)
-     LUT4:I3->O           10   0.612   0.750  XLXI_4/v_cnt_and000021 (XLXI_4/v_cnt_and0000)
+     FDR:C->Q              2   0.514   0.532  XLXI_4/h_cnt_2 (XLXI_4/h_cnt_2)
+     LUT4:I0->O            1   0.612   0.000  XLXI_4/h_cnt_cmp_lt00002211 (XLXI_4/h_cnt_cmp_lt00002211)
+     MUXF5:I1->O           2   0.278   0.449  XLXI_4/h_cnt_cmp_lt0000221_f5 (XLXI_4/h_cnt_cmp_lt0000221)
+     LUT4:I1->O            1   0.612   0.387  XLXI_4/h_cnt_cmp_lt0000233 (XLXI_4/h_cnt_cmp_lt0000)
+     LUT4:I2->O           10   0.612   0.750  XLXI_4/v_cnt_and000021 (XLXI_4/v_cnt_and0000)
      FDRE:R                    0.795          XLXI_4/v_cnt_0
     ----------------------------------------
-    Total                      5.161ns (3.145ns logic, 2.016ns route)
-                                       (60.9% logic, 39.1% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'XLXI_17/State_FSM_FFd2'
-  Clock period: 2.363ns (frequency: 423.182MHz)
-  Total number of paths / destination ports: 10 / 4
--------------------------------------------------------------------------
-Delay:               2.363ns (Levels of Logic = 1)
-  Source:            XLXI_17/player_y_0 (LATCH)
-  Destination:       XLXI_17/player_y_0 (LATCH)
-  Source Clock:      XLXI_17/State_FSM_FFd2 falling
-  Destination Clock: XLXI_17/State_FSM_FFd2 falling
-
-  Data Path: XLXI_17/player_y_0 to XLXI_17/player_y_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDE:G->Q              5   0.588   0.538  XLXI_17/player_y_0 (XLXI_17/player_y_0)
-     INV:I->O              1   0.612   0.357  XLXI_17/Msub_player_y_sub0000_xor<0>11_INV_0 (XLXI_17/player_y_sub0000<0>)
-     LDE:D                     0.268          XLXI_17/player_y_0
-    ----------------------------------------
-    Total                      2.363ns (1.468ns logic, 0.895ns route)
-                                       (62.1% logic, 37.9% route)
+    Total                      5.541ns (3.423ns logic, 2.118ns route)
+                                       (61.8% logic, 38.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
@@ -600,114 +618,120 @@ Offset:              3.490ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_4/clk_251'
-  Total number of paths / destination ports: 110 / 4
+  Total number of paths / destination ports: 76 / 4
 -------------------------------------------------------------------------
-Offset:              11.125ns (Levels of Logic = 7)
-  Source:            XLXI_4/h_cnt_7 (FF)
+Offset:              10.491ns (Levels of Logic = 8)
+  Source:            XLXI_4/v_cnt_5 (FF)
   Destination:       VGA_B (PAD)
   Source Clock:      XLXI_4/clk_251 rising
 
-  Data Path: XLXI_4/h_cnt_7 to VGA_B
+  Data Path: XLXI_4/v_cnt_5 to VGA_B
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              6   0.514   0.721  XLXI_4/h_cnt_7 (XLXI_4/h_cnt_7)
-     LUT3_D:I0->O          2   0.612   0.449  XLXI_4/PIX_X_cmp_le000021 (XLXI_4/N4)
-     LUT4:I1->O            1   0.612   0.509  XLXI_4/PIX_X_and0000118 (XLXI_4/PIX_X_and0000118)
-     LUT3:I0->O            1   0.612   0.360  XLXI_4/PIX_X_and0000120 (XLXI_4/PIX_X_and0000120)
-     LUT4:I3->O           13   0.612   0.988  XLXI_4/PIX_X_and0000139 (XLXI_4/PIX_X_and0000)
-     LUT3:I0->O            1   0.612   0.387  XLXI_4/VGA_B36_SW0 (N12)
-     LUT4:I2->O            1   0.612   0.357  XLXI_4/VGA_B36 (VGA_B_OBUF)
+     FDRE:C->Q             6   0.514   0.721  XLXI_4/v_cnt_5 (XLXI_4/v_cnt_5)
+     LUT4:I0->O            1   0.612   0.000  XLXI_4/PIX_X_and0000661 (XLXI_4/PIX_X_and0000661)
+     MUXF5:I1->O           1   0.278   0.360  XLXI_4/PIX_X_and000066_f5 (XLXI_4/PIX_X_and000066)
+     LUT4:I3->O            1   0.612   0.000  XLXI_4/PIX_X_and0000130_SW0_G (N54)
+     MUXF5:I1->O           1   0.278   0.360  XLXI_4/PIX_X_and0000130_SW0 (N43)
+     LUT4:I3->O           12   0.612   0.969  XLXI_4/PIX_X_and0000130 (XLXI_4/PIX_X_and0000)
+     LUT4:I0->O            1   0.612   0.426  XLXI_4/VGA_B73 (XLXI_4/VGA_B73)
+     LUT4:I1->O            1   0.612   0.357  XLXI_4/VGA_B84 (VGA_B_OBUF)
      OBUF:I->O                 3.169          VGA_B_OBUF (VGA_B)
     ----------------------------------------
-    Total                     11.125ns (7.355ns logic, 3.770ns route)
-                                       (66.1% logic, 33.9% route)
+    Total                     10.491ns (7.299ns logic, 3.192ns route)
+                                       (69.6% logic, 30.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_3/div_y_sig_not0001'
-  Total number of paths / destination ports: 160 / 2
+  Total number of paths / destination ports: 162 / 2
 -------------------------------------------------------------------------
-Offset:              9.725ns (Levels of Logic = 7)
+Offset:              9.842ns (Levels of Logic = 9)
   Source:            XLXI_3/div_y_sig_0 (LATCH)
-  Destination:       VGA_B (PAD)
+  Destination:       VGA_G (PAD)
   Source Clock:      XLXI_3/div_y_sig_not0001 falling
 
-  Data Path: XLXI_3/div_y_sig_0 to VGA_B
+  Data Path: XLXI_3/div_y_sig_0 to VGA_G
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q               7   0.588   0.754  XLXI_3/div_y_sig_0 (XLXI_3/div_y_sig_0)
-     LUT2:I0->O            1   0.612   0.000  XLXI_17/Madd_RGB_MAP_addsub0000_lut<2> (XLXI_17/Madd_RGB_MAP_addsub0000_lut<2>)
-     MUXCY:S->O            1   0.404   0.000  XLXI_17/Madd_RGB_MAP_addsub0000_cy<2> (XLXI_17/Madd_RGB_MAP_addsub0000_cy<2>)
-     XORCY:CI->O           2   0.699   0.532  XLXI_17/Madd_RGB_MAP_addsub0000_xor<3> (XLXI_17/RGB_MAP_addsub0000<3>)
-     LUT4:I0->O            1   0.612   0.387  XLXI_4/VGA_B15 (XLXI_4/VGA_B15)
-     LUT3:I2->O            1   0.612   0.387  XLXI_4/VGA_B36_SW0 (N12)
-     LUT4:I2->O            1   0.612   0.357  XLXI_4/VGA_B36 (VGA_B_OBUF)
+     LD:G->Q               8   0.588   0.795  XLXI_3/div_y_sig_0 (XLXI_3/div_y_sig_0)
+     LUT2:I0->O            1   0.612   0.000  XLXI_18/Madd_RGB_MAP_addsub0000_lut<2> (XLXI_18/Madd_RGB_MAP_addsub0000_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_18/Madd_RGB_MAP_addsub0000_cy<2> (XLXI_18/Madd_RGB_MAP_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_18/Madd_RGB_MAP_addsub0000_cy<3> (XLXI_18/Madd_RGB_MAP_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_18/Madd_RGB_MAP_addsub0000_cy<4> (XLXI_18/Madd_RGB_MAP_addsub0000_cy<4>)
+     XORCY:CI->O           2   0.699   0.532  XLXI_18/Madd_RGB_MAP_addsub0000_xor<5> (XLXI_18/RGB_MAP_addsub0000<5>)
+     LUT4:I0->O            1   0.612   0.387  XLXI_4/VGA_G5 (XLXI_4/VGA_G5)
+     LUT3:I2->O            1   0.612   0.360  XLXI_4/VGA_G80_SW0 (N39)
+     LUT4:I3->O            1   0.612   0.357  XLXI_4/VGA_G80 (VGA_G_OBUF)
+     OBUF:I->O                 3.169          VGA_G_OBUF (VGA_G)
+    ----------------------------------------
+    Total                      9.842ns (7.411ns logic, 2.431ns route)
+                                       (75.3% logic, 24.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50MHz'
+  Total number of paths / destination ports: 52 / 2
+-------------------------------------------------------------------------
+Offset:              10.335ns (Levels of Logic = 8)
+  Source:            XLXI_18/player_x_3 (FF)
+  Destination:       VGA_B (PAD)
+  Source Clock:      Clk_50MHz rising
+
+  Data Path: XLXI_18/player_x_3 to VGA_B
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.514   0.862  XLXI_18/player_x_3 (XLXI_18/player_x_3)
+     LUT4:I1->O            2   0.612   0.449  XLXI_18/RGB_MAP<0>121 (XLXI_18/RGB_MAP<0>_bdd19)
+     LUT4:I1->O            1   0.612   0.000  XLXI_18/RGB_MAP<0>1011 (XLXI_18/RGB_MAP<0>101)
+     MUXF5:I1->O           1   0.278   0.387  XLXI_18/RGB_MAP<0>101_f5 (XLXI_18/RGB_MAP<0>_bdd15)
+     LUT4:I2->O            2   0.612   0.449  XLXI_18/RGB_MAP<0>7 (XLXI_18/RGB_MAP<0>_bdd8)
+     LUT4:I1->O            1   0.612   0.000  XLXI_18/RGB_MAP<0>511 (XLXI_18/RGB_MAP<0>51)
+     MUXF5:I1->O           2   0.278   0.532  XLXI_18/RGB_MAP<0>51_f5 (XLXI_18/RGB_MAP<0>_bdd3)
+     LUT4:I0->O            1   0.612   0.357  XLXI_4/VGA_B84 (VGA_B_OBUF)
      OBUF:I->O                 3.169          VGA_B_OBUF (VGA_B)
     ----------------------------------------
-    Total                      9.725ns (7.308ns logic, 2.417ns route)
-                                       (75.1% logic, 24.9% route)
+    Total                     10.335ns (7.299ns logic, 3.036ns route)
+                                       (70.6% logic, 29.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_3/div_x_sig_not0001'
-  Total number of paths / destination ports: 59 / 2
+  Total number of paths / destination ports: 76 / 2
 -------------------------------------------------------------------------
-Offset:              9.420ns (Levels of Logic = 7)
-  Source:            XLXI_3/div_x_sig_2 (LATCH)
+Offset:              10.079ns (Levels of Logic = 8)
+  Source:            XLXI_3/div_x_sig_3 (LATCH)
   Destination:       VGA_B (PAD)
   Source Clock:      XLXI_3/div_x_sig_not0001 falling
 
-  Data Path: XLXI_3/div_x_sig_2 to VGA_B
+  Data Path: XLXI_3/div_x_sig_3 to VGA_B
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q               2   0.588   0.449  XLXI_3/div_x_sig_2 (XLXI_3/div_x_sig_2)
-     LUT2:I1->O            1   0.612   0.000  XLXI_17/Madd_RGB_MAP_addsub0000_lut<2> (XLXI_17/Madd_RGB_MAP_addsub0000_lut<2>)
-     MUXCY:S->O            1   0.404   0.000  XLXI_17/Madd_RGB_MAP_addsub0000_cy<2> (XLXI_17/Madd_RGB_MAP_addsub0000_cy<2>)
-     XORCY:CI->O           2   0.699   0.532  XLXI_17/Madd_RGB_MAP_addsub0000_xor<3> (XLXI_17/RGB_MAP_addsub0000<3>)
-     LUT4:I0->O            1   0.612   0.387  XLXI_4/VGA_B15 (XLXI_4/VGA_B15)
-     LUT3:I2->O            1   0.612   0.387  XLXI_4/VGA_B36_SW0 (N12)
-     LUT4:I2->O            1   0.612   0.357  XLXI_4/VGA_B36 (VGA_B_OBUF)
+     LD:G->Q               2   0.588   0.532  XLXI_3/div_x_sig_3 (XLXI_3/div_x_sig_3)
+     LUT4:I0->O            2   0.612   0.449  XLXI_18/RGB_MAP<0>121 (XLXI_18/RGB_MAP<0>_bdd19)
+     LUT4:I1->O            1   0.612   0.000  XLXI_18/RGB_MAP<0>1011 (XLXI_18/RGB_MAP<0>101)
+     MUXF5:I1->O           1   0.278   0.387  XLXI_18/RGB_MAP<0>101_f5 (XLXI_18/RGB_MAP<0>_bdd15)
+     LUT4:I2->O            2   0.612   0.449  XLXI_18/RGB_MAP<0>7 (XLXI_18/RGB_MAP<0>_bdd8)
+     LUT4:I1->O            1   0.612   0.000  XLXI_18/RGB_MAP<0>511 (XLXI_18/RGB_MAP<0>51)
+     MUXF5:I1->O           2   0.278   0.532  XLXI_18/RGB_MAP<0>51_f5 (XLXI_18/RGB_MAP<0>_bdd3)
+     LUT4:I0->O            1   0.612   0.357  XLXI_4/VGA_B84 (VGA_B_OBUF)
      OBUF:I->O                 3.169          VGA_B_OBUF (VGA_B)
     ----------------------------------------
-    Total                      9.420ns (7.308ns logic, 2.112ns route)
-                                       (77.6% logic, 22.4% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_17/State_FSM_FFd2'
-  Total number of paths / destination ports: 12 / 2
--------------------------------------------------------------------------
-Offset:              8.731ns (Levels of Logic = 6)
-  Source:            XLXI_17/player_y_1 (LATCH)
-  Destination:       VGA_G (PAD)
-  Source Clock:      XLXI_17/State_FSM_FFd2 falling
-
-  Data Path: XLXI_17/player_y_1 to VGA_G
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDE:G->Q              4   0.588   0.502  XLXI_17/player_y_1 (XLXI_17/player_y_1)
-     LUT4:I3->O            1   0.612   0.509  XLXI_17/RGB_MAP<0>167 (XLXI_17/RGB_MAP<0>167)
-     LUT4:I0->O            1   0.612   0.360  XLXI_17/RGB_MAP<0>184_SW0 (N8)
-     LUT4:I3->O            3   0.612   0.520  XLXI_17/RGB_MAP<0>184 (XLXI_17/N11)
-     LUT2:I1->O            1   0.612   0.000  XLXI_4/VGA_G191 (XLXI_4/VGA_G19)
-     MUXF5:I1->O           1   0.278   0.357  XLXI_4/VGA_G19_f5 (VGA_G_OBUF)
-     OBUF:I->O                 3.169          VGA_G_OBUF (VGA_G)
-    ----------------------------------------
-    Total                      8.731ns (6.483ns logic, 2.248ns route)
-                                       (74.3% logic, 25.7% route)
+    Total                     10.079ns (7.373ns logic, 2.706ns route)
+                                       (73.2% logic, 26.8% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.79 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.05 secs
  
 --> 
 
-Total memory usage is 221400 kilobytes
+Total memory usage is 226748 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    8 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

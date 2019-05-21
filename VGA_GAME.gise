@@ -25,6 +25,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="GameLogic.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="GameLogic.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="GameLogic.vhi"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="GameMap.prj"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="GameMap.spl"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="GameMap.stx"/>
@@ -149,7 +150,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1557835875" xil_pn:in_ck="3995954802220001" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="3032278207313301917" xil_pn:start_ts="1557835873">
+    <transform xil_pn:end_ts="1558434269" xil_pn:in_ck="3995954802220001" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="3032278207313301917" xil_pn:start_ts="1558434267">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Scheme.vhf"/>
@@ -174,7 +175,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1557835884" xil_pn:in_ck="8136445192265101595" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="3063115731160458241" xil_pn:start_ts="1557835875">
+    <transform xil_pn:end_ts="1558434281" xil_pn:in_ck="8136445192265101595" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="3063115731160458241" xil_pn:start_ts="1558434269">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -199,7 +200,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1557835889" xil_pn:in_ck="-6358932647776032359" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="4283692373842373976" xil_pn:start_ts="1557835884">
+    <transform xil_pn:end_ts="1558434285" xil_pn:in_ck="-6358932647776032359" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="4283692373842373976" xil_pn:start_ts="1558434281">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Scheme.bld"/>
@@ -208,12 +209,10 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1557835914" xil_pn:in_ck="-6358932647776032358" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1309755933173654900" xil_pn:start_ts="1557835889">
+    <transform xil_pn:end_ts="1558434310" xil_pn:in_ck="-6358932647776032358" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1309755933173654900" xil_pn:start_ts="1558434285">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Scheme.pcf"/>
       <outfile xil_pn:name="Scheme_map.map"/>
       <outfile xil_pn:name="Scheme_map.mrp"/>
@@ -224,9 +223,8 @@
       <outfile xil_pn:name="Scheme_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1557835960" xil_pn:in_ck="3233448014809986483" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-3872219738485705569" xil_pn:start_ts="1557835914">
+    <transform xil_pn:end_ts="1558434356" xil_pn:in_ck="3233448014809986483" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-3872219738485705569" xil_pn:start_ts="1558434310">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Scheme.ncd"/>
       <outfile xil_pn:name="Scheme.pad"/>
@@ -239,7 +237,7 @@
       <outfile xil_pn:name="Scheme_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1557835995" xil_pn:in_ck="3995954802214552" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1557835960">
+    <transform xil_pn:end_ts="1558434391" xil_pn:in_ck="3995954802214552" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1558434356">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -251,7 +249,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1557835960" xil_pn:in_ck="-6358932647776032490" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1557835957">
+    <transform xil_pn:end_ts="1558434356" xil_pn:in_ck="-6358932647776032490" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1558434352">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Scheme.twr"/>

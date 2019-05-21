@@ -1,26 +1,41 @@
-V3 24
-FL C:/Users/lab/Desktop/VGA_GAME/GameLogic.vhd 2019/05/14.14:10:42 P.20131013
-EN work/GameLogic 1557835881 FL C:/Users/lab/Desktop/VGA_GAME/GameLogic.vhd \
+V3 31
+FL "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/GameLogic.vhd" 2019/05/21.12:24:05 P.20131013
+EN work/GameLogic 1558434275 \
+      FL "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/GameLogic.vhd" \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/GameLogic/Behavioral 1557835882 \
-      FL C:/Users/lab/Desktop/VGA_GAME/GameLogic.vhd EN work/GameLogic 1557835881
-FL C:/Users/lab/Desktop/VGA_GAME/Map.vhd 2019/05/14.11:32:33 P.20131013
-EN work/GameMap 1557835877 FL C:/Users/lab/Desktop/VGA_GAME/Map.vhd \
+AR work/GameLogic/Behavioral 1558434276 \
+      FL "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/GameLogic.vhd" \
+      EN work/GameLogic 1558434275
+FL "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Map.vhd" 2019/05/21.11:08:12 P.20131013
+EN work/GameMap 1558434271 \
+      FL "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Map.vhd" \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/GameMap/Behavioral 1557835878 \
-      FL C:/Users/lab/Desktop/VGA_GAME/Map.vhd EN work/GameMap 1557835877
-FL C:/Users/lab/Desktop/VGA_GAME/Scheme.vhf 2019/05/14.14:11:14 P.20131013
-EN work/Scheme 1557835883 FL C:/Users/lab/Desktop/VGA_GAME/Scheme.vhf \
+AR work/GameMap/Behavioral 1558434272 \
+      FL "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Map.vhd" \
+      EN work/GameMap 1558434271
+FL "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.vhf" 2019/05/21.12:24:28 P.20131013
+EN work/Scheme 1558434277 \
+      FL "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.vhf" \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/Scheme/BEHAVIORAL 1557835884 \
-      FL C:/Users/lab/Desktop/VGA_GAME/Scheme.vhf EN work/Scheme 1557835883 \
-      CP GameMap CP VGAdriver CP PS2_Kbd CP AND3B2 CP GameLogic
-FL C:/Users/lab/Desktop/VGA_GAME/VGA.vhd 2019/05/07.12:19:46 P.20131013
-EN work/VGAdriver 1557835879 FL C:/Users/lab/Desktop/VGA_GAME/VGA.vhd \
+AR work/Scheme/BEHAVIORAL 1558434278 \
+      FL "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/Scheme.vhf" \
+      EN work/Scheme 1558434277 CP GameMap CP VGAdriver CP PS2_Kbd CP GameLogic
+FL "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/VGA.vhd" 2019/05/21.11:08:12 P.20131013
+EN work/VGAdriver 1558434273 \
+      FL "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/VGA.vhd" \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/VGAdriver/Behavioral 1557835880 \
-      FL C:/Users/lab/Desktop/VGA_GAME/VGA.vhd EN work/VGAdriver 1557835879
+AR work/VGAdriver/Behavioral 1558434274 \
+      FL "C:/Users/lab/Desktop/RPG_VHDL_Spartan3E - Kopia/VGA.vhd" \
+      EN work/VGAdriver 1558434273
+FL C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/GameLogic.vhd 2019/05/21.11:44:28 P.20131013
+FL C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/Map.vhd 2019/05/21.11:08:12 P.20131013
+FL C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/Scheme.vhf 2019/05/21.11:44:52 P.20131013
+FL C:/Users/lab/Desktop/RPG_VHDL_Spartan3E/VGA.vhd 2019/05/21.11:08:12 P.20131013
+FL C:/Users/lab/Desktop/VGA_GAME/GameLogic.vhd 2019/05/14.14:10:42 P.20131013
+FL C:/Users/lab/Desktop/VGA_GAME/Map.vhd 2019/05/14.11:32:33 P.20131013
+FL C:/Users/lab/Desktop/VGA_GAME/Scheme.vhf 2019/05/14.14:11:14 P.20131013
+FL C:/Users/lab/Desktop/VGA_GAME/VGA.vhd 2019/05/07.12:19:46 P.20131013
 FL C:/Users/lab/VGA_GAME/Colors.vhd 2019/03/26.13:18:11 P.20131013
 EN work/picture 1554803806 FL C:/Users/lab/VGA_GAME/Colors.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
